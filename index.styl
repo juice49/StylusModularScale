@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Alias `modularScale` to `ms`
+   ========================================================================== */
+
+modularScale = ms
+
+
+
+
+
+/* ==========================================================================
+   Config
+   ========================================================================== */
+   
+msConfig = {}
+
+
+
+/* Scales - from http://modularscale.com/
+   ========================================================================== */
+   
+msConfig.scales = {
+	minorSecond: 16 / 15,
+	majorSecond: 9 / 8,
+	minorThird: 6 / 5,
+	majorThird: 5 / 4,
+	perfectFourth: 4 / 3,
+	augFourthDimFifth: 1.414,
+	perfectFifth: 3 / 2,
+	minorSixth: 8 / 5,
+	golden: 1.618,
+	majorSixth: 5 / 3,
+	minorSeventh: 16 / 9,
+	majorSeventh: 15 / 8,
+	octave: 2,
+	majorTenth: 5 / 2,
+	majorEleventh: 8 / 3,
+	majorTwelfth: 3,
+	doubleOctave: 4
+}
+
+
+
+
+
+/* ==========================================================================
+   MS
+   ========================================================================== */
+
+ms(scale = 1, baseFontSize = 16, ratio = 'golden', i = 0)
+
+	if ratio is a 'string' and ratio in scales
+		ratio = scales[ratio]
+
+	if scale > 0 && i < scale
+		return ms(scale, baseFontSize * ratio, ratio, i + 1)
+
+	if scale < 0 && i > scale
+		return ms(scale, baseFontSize / ratio, ratio, i - 1)
+
+	unit(baseFontSize, px)
