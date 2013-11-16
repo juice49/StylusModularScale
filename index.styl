@@ -1,24 +1,24 @@
 /* ==========================================================================
-   Alias `modularScale` to `ms`
-   ========================================================================== */
+	 Alias `ms` to `modularScale`
+	 ========================================================================== */
 
-modularScale = ms
+ms = modularScale
 
 
 
 
 
 /* ==========================================================================
-   Config
-   ========================================================================== */
-   
+	 Config
+	 ========================================================================== */
+
 msConfig = {}
 
 
 
 /* Scales - from http://modularscale.com/
-   ========================================================================== */
-   
+	 ========================================================================== */
+
 msConfig.scales = {
 	minorSecond: 16 / 15,
 	majorSecond: 9 / 8,
@@ -44,18 +44,18 @@ msConfig.scales = {
 
 
 /* ==========================================================================
-   MS
-   ========================================================================== */
+	 Modular Scale
+	 ========================================================================== */
 
-ms(scale = 1, baseFontSize = 16, ratio = 'golden', i = 0)
+modularScale(scale = 1, baseFontSize = 16, ratio = 'golden', i = 0)
 
-	if ratio is a 'string' and ratio in scales
-		ratio = scales[ratio]
+	if ratio is a 'string' and ratio in msConfig.scales
+		ratio = msConfig.scales[ratio]
 
 	if scale > 0 && i < scale
-		return ms(scale, baseFontSize * ratio, ratio, i + 1)
+		return modularScale(scale, baseFontSize * ratio, ratio, i + 1)
 
 	if scale < 0 && i > scale
-		return ms(scale, baseFontSize / ratio, ratio, i - 1)
+		return modularScale(scale, baseFontSize / ratio, ratio, i - 1)
 
 	unit(baseFontSize, px)

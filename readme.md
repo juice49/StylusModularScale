@@ -32,7 +32,7 @@ This is the most basic usage:
 
 	h1
 		// Scale, Base Font Size, Ratio
-		modularScale(4, 16, 'golden')
+		font-size modularScale(4, 16, 'golden')
 		
 I recommend wrapping the mixin after importing it to include your base values. This means you only have to pass in a base font size and ratio once. The setup looks like this:
 
@@ -42,11 +42,14 @@ I recommend wrapping the mixin after importing it to include your base values. T
 		modularScale(scale, baseFontSize = 18, ratio = 'golden')
 	
 	h1
-		ms(4)
+		font-size ms(4)
 
 Our redeclaration of `ms` maps to the `ms` mixin and always includes the config we've set.
+
+*Your redeclaration will need to call `modularScale` directly, rather than the `ms`.*
 
 ## Todo
 
 - Explain config better
 - Support an "important number" for double-stranded scale
+- Test more rigorously; particularly rounding
