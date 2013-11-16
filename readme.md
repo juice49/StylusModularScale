@@ -46,7 +46,11 @@ I recommend wrapping the mixin after importing it to include your base values. T
 
 Our redeclaration of `ms` maps to the `ms` mixin and always includes the config we've set.
 
-*Your redeclaration will need to call `modularScale` directly, rather than the `ms`.*
+*Your redeclaration will need to call `modularScale` directly, rather than the `ms` alias.*
+
+## Bower
+
+	bower install StylusModularScale
 
 ## Todo
 
