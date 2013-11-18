@@ -39,7 +39,7 @@ I recommend wrapping the mixin after importing it to include your base values. T
 	@import StylusModularScale
 	
 	ms(scale)
-		modularScale(scale, baseFontSize = 18, ratio = 'golden')
+		modularScale(scale, 18, golden')
 	
 	h1
 		font-size ms(4)
