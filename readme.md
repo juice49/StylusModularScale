@@ -22,8 +22,6 @@ A little mixin for helping set type to a modular scale with Stylus. All of the s
 
 You can also pass your own ratio to the mixin.
 
-The mixin is available as either `ms` or `modularScale`.
-
 ## Usage
 
 This is the most basic usage:
@@ -44,9 +42,7 @@ I recommend wrapping the mixin after importing it to include your base values. T
 	h1
 		font-size ms(4)
 
-Our redeclaration of `ms` maps to the `ms` mixin and always includes the config we've set.
-
-*Your redeclaration will need to call `modularScale` directly, rather than the `ms` alias.*
+Our redeclaration of `ms` maps to the `modularScale` mixin and always includes the config we've set.
 
 ## Bower
 
