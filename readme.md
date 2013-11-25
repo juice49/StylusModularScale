@@ -29,8 +29,8 @@ This is the most basic usage:
 	@import StylusModularScale
 
 	h1
-		// Scale, Base Font Size, Ratio
-		font-size modularScale(4, 16, 'golden')
+		// Scale, Base Font Size, Ratio, Unit
+		font-size modularScale(4, 16, 'golden', rem)
 		
 ### Arguments
 
@@ -46,6 +46,10 @@ The base font size in pixels. Unit optional; both `18` and `18px` are valid.
 
 The ratio to use for scaling. Must be either a string matching one of the predefined ratios, or a formula for a custom ratio.
 
+### Unit
+
+The unit to use for type. Any CSS font size unit permitted.
+
 ### Configuration
 
 I recommend wrapping the mixin to include your base values. This means you only have to pass in a base font size and ratio once. The setup looks like this:
@@ -54,7 +58,7 @@ I recommend wrapping the mixin to include your base values. This means you only 
 	
 	// Create a new mixin that in turn calls `modularScale` with preset arguments
 	ms(scale)
-		modularScale(scale, 18, 'golden')
+		modularScale(scale, 18, 'golden', rem)
 	
 	h1
 		font-size ms(4)
