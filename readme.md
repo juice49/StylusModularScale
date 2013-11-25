@@ -46,7 +46,7 @@ The base font size in pixels. Unit optional; both `18` and `18px` are valid.
 
 The ratio to use for scaling. Must be either a string matching one of the predefined ratios, or a formula for a custom ratio.
 
-### Unit
+#### Unit
 
 The unit to use for type. Any CSS font size unit permitted.
 
