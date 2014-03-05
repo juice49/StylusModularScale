@@ -31,7 +31,7 @@ This is the most basic usage:
 	h1
 		// Scale, Base Font Size, Ratio, Unit
 		font-size modularScale(4, 16, 'golden', rem)
-		
+
 ### Arguments
 
 #### Scale
@@ -55,19 +55,19 @@ The unit to use for type. Any CSS font size unit permitted.
 I recommend wrapping the mixin to include your base values. This means you only have to pass in a base font size and ratio once. The setup looks like this:
 
 	@import StylusModularScale
-	
+
 	// Create a new mixin that in turn calls `modularScale` with preset arguments
 	ms(scale)
 		modularScale(scale, 18, 'golden', rem)
-	
+
 	h1
 		font-size ms(4)
 
 Our redeclaration of `ms` maps to the `modularScale` mixin and always includes the config we've set.
 
-## Bower
+## Install
 
-	bower install StylusModularScale
+	npm install juice49/StylusModularScale
 
 ## Todo
 
