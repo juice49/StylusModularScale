@@ -71,6 +71,7 @@ Our redeclaration of `ms` maps to the `modularScale` mixin and always includes t
 
 ## Todo
 
+- Switch to a JS implemtation to improve portability and testability
 - Explain config better
 - Support an "important number" for double-stranded scale
 - Test more rigorously; particularly rounding
